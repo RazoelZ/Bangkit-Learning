@@ -5,7 +5,8 @@
 }
 
 body{
-  margin: 0 15rem;
+  max-width: 1040px;
+  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -17,9 +18,14 @@ nav a{
 }
 
 .topbar{
-  background-color: #279EFF;
+  display: flex;
+  background-color: #FF6666;
   border-radius: 0 0 1rem 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1040px;
 }
 
 .topbar img{
@@ -29,64 +35,77 @@ nav a{
 }
 
 .topbar ul{
+  height: 100%;
+  align-items: center;
   display: flex;
   list-style: none;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .topbar li{
   font-size: 1.1rem;
 }
 
+nav{
+  flex: 1;
+  align-items: center;  
+}
+
 nav a:hover{
+  transition: 0.25s;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 main{
-  margin-top: 1rem;
+  margin-top: calc(67px + 1rem);
   display: flex;
-  
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#intro{
+  border-radius: 1rem;
+  padding : 1rem;
+  flex: 3;
+  background-color: #FF6666;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #content{
-  border-radius: 1rem;
-  padding : 1rem;
-  flex: 5;
-  background-color: #279EFF;
-  margin-right: 2rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  display: flex;
+  gap: 1rem;
 }
 
 #about{
   text-indent: 2rem;
-  background-color: #279EFF;
+  background-color: #FF6666;
   border-radius: 1rem;
   padding: 1rem;
   text-align: justify;
 }
 
-#content img{
+
+#intro img{
   width: 100%;
   height: auto;
   border-radius: 1rem;
 }
 
 main aside{
+  flex: 1;
+  display: flex;
   border-radius: 1rem;
-  margin-right: 2rem;
-  flex : 2;
   background-color: #40F8FF;
+
 }
 
 #profile{
   padding: 1rem;
   text-align: left;
-  background-color: #279EFF;
+  background-color: #FF6666;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  flex-direction: column;
 }
 
 #profile header{
@@ -100,18 +119,22 @@ main aside{
   margin: 1rem 0;
 }
 
-#experience{
-  margin-top: 1rem;
-  display: flex;
-  border-radius: 1rem;
-  justify-content: space-evenly;
+#profile img:hover{
+  transform: scale(1.05);
+  transition: transform 0.25s;
   
 }
 
+#experience{
+  display: flex;
+  border-radius: 1rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
 #experience #job{
-  background-color: #279EFF;
+  background-color: #FF6666;
   flex: 1;
-  margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -124,11 +147,28 @@ main aside{
   border-radius: 1rem;
 }
 
+#experience #job figure img:hover{
+  transform: scale(1.05);
+  transition: transform 0.25s;
+}
+
 footer{
   margin-top: 1rem;
-  background-color: #279EFF;
+  background-color: #FF6666;
   border-radius: 1rem 1rem 0 0;
   padding: 1rem;
   text-align: center;
   color: #fff;
+}
+
+@media screen and (max-width: 768px){
+  #content{
+    flex-direction: column;
+  }
+  #experience{
+    flex-flow: column nowrap;
+  }
+  aside #profile{
+    width: 100%;
+  }
 }
