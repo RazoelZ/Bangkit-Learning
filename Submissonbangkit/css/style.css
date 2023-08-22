@@ -1,6 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+  color: #fff;
 }
 
 body{
@@ -9,22 +10,22 @@ body{
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color : #0C356A;
 }
 
 nav a{
   text-decoration: none;
-  color: #fff;
 }
 
 .topbar{
   background-color: #279EFF;
   border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .topbar img{
   width: 60px;
   height: auto; 
+  align-self: flex-start;
 }
 
 .topbar ul{
@@ -46,20 +47,31 @@ nav a:hover{
 main{
   margin-top: 1rem;
   display: flex;
+  
 }
 
 #content{
   border-radius: 1rem;
+  padding : 1rem;
   flex: 5;
-  background-color: #40F8FF;
+  background-color: #279EFF;
   margin-right: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 #about{
-  margin-top: 1rem;
-  background-color: #40F8FF;
+  text-indent: 2rem;
+  background-color: #279EFF;
   border-radius: 1rem;
   padding: 1rem;
+  text-align: justify;
+}
+
+#content img{
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
 main aside{
@@ -71,30 +83,51 @@ main aside{
 
 #profile{
   padding: 1rem;
+  text-align: left;
+  background-color: #279EFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 #profile header{
   text-align: center;
 }
 
-.experience{
+#profile img{
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+#experience{
   margin-top: 1rem;
-  background-color: #40F8FF;
   display: flex;
   border-radius: 1rem;
   justify-content: space-evenly;
+  
 }
 
-.experience #job{
+#experience #job{
+  background-color: #279EFF;
   flex: 1;
   margin: 1rem;
   padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+#experience #job figure img{
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
 footer{
   margin-top: 1rem;
   background-color: #279EFF;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1rem 1rem 0 0;
   padding: 1rem;
   text-align: center;
   color: #fff;
